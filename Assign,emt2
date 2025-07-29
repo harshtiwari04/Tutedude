@@ -1,0 +1,13 @@
+#Task1
+a = int(input("Enter the number: "))
+
+if a % 2 == 0:
+    print(f"{a} is an Even number")
+else:
+    print(f"{a} is an Odd number")
+
+    #Task2
+    sum=0
+for i in range(0,51):
+    sum=sum+i
+print(sum)
