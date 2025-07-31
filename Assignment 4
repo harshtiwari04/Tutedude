@@ -1,0 +1,34 @@
+#TASK1
+file1='sample.txt'
+file1=open(file1,'w')
+file1.write('Line 1 : This is a sample text file.\n')
+file1.write('Line 2 : It contains multiple lines.\n')
+file1.close()
+
+try:
+    file1=open(file1,'r')
+    readingfile=file1.read()
+    print(readingfile)
+    file1.close()
+except:
+    print("File " +file1 + " Doesn't exist")
+
+#TASK2
+# Step 1: Take user input and write to output.txt'''
+text_to_write = input("Enter text to write to the file: ")
+with open("output.txt", "w") as file:
+    file.write(text_to_write + "\n")
+print("Data successfully written to output.txt.")
+
+# Step 2: Append additional input to the same file
+additional_text = input("Enter additional text to append: ")
+with open("output.txt", "a") as file:
+    file.write(additional_text + "\n")
+print("Data successfully appended.")
+
+# Step 3: Read and display the final content
+print("\nFinal content of output.txt:")
+with open("output.txt", "r") as file:
+    print(file.read())
+
+
